@@ -1,5 +1,5 @@
-# Author: Alejandro Simon
-# Partner: Owen Madden
+# Author: Alejandro Simon (main + encoder)
+# Partner: Owen Madden (decoder)
 # Lab 6, Group 102
 
 # Encoder function
@@ -11,16 +11,6 @@ def encode(password):
         # Convert the digit to an integer, add 3, and take modulo 10 to wrap around if necessary
         encoded += str((int(digit) + 3) % 10)
     return encoded
-
-# Decoder function
-def decode(encoded_password):
-    # Initialize an empty string to store the decoded password
-    decoded = ""
-    # Loop through each digit in the encoded password
-    for digit in encoded_password:
-        # Convert the digit to an integer, subtract 3, and take modulo 10 to wrap around if necessary
-        decoded += str((int(digit) - 3) % 10)
-    return decoded
 
 # Main function
 def main():
